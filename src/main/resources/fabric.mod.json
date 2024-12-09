@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "betterbranches",
+	"version": "${version}",
+	"name": "Better Branches",
+	"description": "Adds pretty and dynamic branches to vanilla trees in a simple way.",
+	"authors": [
+		"Wereweiller, JoeLikesToDraw"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/betterbranches",
+		"sources": "https://github.com/dryas-octopetala/BetterBranchesFabric"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/betterbranches/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"wereweiller.betterbranches.BetterBranches"
+		],
+		"client": [
+			"wereweiller.betterbranches.BetterBranchesClient"
+		],
+		"fabric-datagen": [
+			"wereweiller.betterbranches.BetterBranchesDataGenerator"
+		]
+	},
+	"mixins": [
+		"betterbranches.mixins.json",
+		{
+			"config": "betterbranches.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
